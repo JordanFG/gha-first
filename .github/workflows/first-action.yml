@@ -1,8 +1,15 @@
 name: Demo
+# ici on definit l'evenement qui va declencher le workflow
 on: workflow_dispatch
 jobs:
+  # Premier job qui s'appelle first-job
   first-job:
     runs-on: ubuntu-latest
+    # Ici on definit les etapes du first-job
     steps:
+      # name permet de definir le nom de la premiere etape
       - name: Print steps
-        run: echo "Hello, World"
+        # run permet de specifier la commande a executer; | est appelé pipe et permet d'ajouter plusieurs commandes
+        run: |
+          echo "Hello, World Doly"
+          echo "Hello, World Khader"
