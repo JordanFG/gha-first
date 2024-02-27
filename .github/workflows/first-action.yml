@@ -1,14 +1,8 @@
 name: Demo
-# ici on definit l'evenement qui va declencher le workflow
 on: workflow_dispatch
 jobs:
-# Premier job qui s'appelle first-job
   first-job:
-  # Ici on definit sur quelle environnement il doit se lancer
     runs-on: ubuntu-latest
-    # Ici on definit les etapes du first-job
     steps:
-    # name permet de definir le nom de la premiere etape
       - name: Print steps
-      # run permet de specifier la commande a executer
         run: echo "Hello, World";
